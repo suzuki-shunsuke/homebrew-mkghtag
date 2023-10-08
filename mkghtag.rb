@@ -5,21 +5,21 @@
 class Mkghtag < Formula
   desc "Create GitHub Tags via API"
   homepage "https://github.com/suzuki-shunsuke/mkghtag"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.0/mkghtag_darwin_amd64.tar.gz"
-      sha256 "48e4527837337fb0c15c48c3f08b8126d6540f785335b58147bc18a261c47a2f"
+      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.1/mkghtag_darwin_amd64.tar.gz"
+      sha256 "f723f43e7e7b8bae1006ce7f02bc7459a6a24cd3475bb3fb12c5964a4ecd504d"
 
       def install
         bin.install "mkghtag"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.0/mkghtag_darwin_arm64.tar.gz"
-      sha256 "b58e4be38df4a17aadeba035a42161a6244e28ef3cd5733a5bc5c0d3fa42ddf5"
+      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.1/mkghtag_darwin_arm64.tar.gz"
+      sha256 "59997aa75d89c96a5722330df179b6a1cddf36db3138aa3673628931d43186e6"
 
       def install
         bin.install "mkghtag"
@@ -29,16 +29,16 @@ class Mkghtag < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.0/mkghtag_linux_arm64.tar.gz"
-      sha256 "9408eacf22ffee1e41debd3136f53ca60ddf814f3ca7cf1e639ca280c14fa3a6"
+      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.1/mkghtag_linux_arm64.tar.gz"
+      sha256 "d904d09fb4d053e51083e7c9e6e0eab2fb4d410bd3fabe24d954cc5385e1d316"
 
       def install
         bin.install "mkghtag"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.0/mkghtag_linux_amd64.tar.gz"
-      sha256 "5bad2a6356a5b6b2bad6bce67bbf56aab5e8292c2af15a1385ecb52d7c75e4ec"
+      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.1/mkghtag_linux_amd64.tar.gz"
+      sha256 "e5c62bff254bcd4d9bb143e589519757a44aba05ade67a5e8a4a08c8f741aac2"
 
       def install
         bin.install "mkghtag"
