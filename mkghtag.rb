@@ -5,21 +5,21 @@
 class Mkghtag < Formula
   desc "Create GitHub Tags via API"
   homepage "https://github.com/suzuki-shunsuke/mkghtag"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.2/mkghtag_darwin_arm64.tar.gz"
-      sha256 "ae0d3c69e18110c332536b788edf5a9c04db1dfec561ccc96edc17cc8f1553f6"
+    if Hardware::CPU.intel?
+      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.3/mkghtag_darwin_amd64.tar.gz"
+      sha256 "f280c3781fd40a181364b8246a2cdbf2c101561b85a709d3f82b2835567b16ca"
 
       def install
         bin.install "mkghtag"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.2/mkghtag_darwin_amd64.tar.gz"
-      sha256 "e1f5cc6c03a4c8b46df223f2b95b4d055ef627b56d623124ace7a77f8b95de9b"
+    if Hardware::CPU.arm?
+      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.3/mkghtag_darwin_arm64.tar.gz"
+      sha256 "8f4a9abf8f6200d091e72be5f30d928fa12bd3c9211d86116b727ea4db4282bc"
 
       def install
         bin.install "mkghtag"
@@ -29,16 +29,16 @@ class Mkghtag < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.2/mkghtag_linux_arm64.tar.gz"
-      sha256 "7e5ee37fd29da7a9ec2bd49f1fb59c3ebbb45af33b4aa3ff3c6f1eb500d6c556"
+      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.3/mkghtag_linux_arm64.tar.gz"
+      sha256 "a895dac88621d0fc0b2b2c37dfd6724460f50182a86825e78c6a9b9eb32beedd"
 
       def install
         bin.install "mkghtag"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.2/mkghtag_linux_amd64.tar.gz"
-      sha256 "f80887593554d61a387914590871d3257e30216c55bdb52d2b3e3609e2350600"
+      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.3/mkghtag_linux_amd64.tar.gz"
+      sha256 "e013f006a328ab260382e623c767b45702cc92a3cc2481a32f18d141feb8ca86"
 
       def install
         bin.install "mkghtag"
