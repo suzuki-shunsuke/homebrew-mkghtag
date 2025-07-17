@@ -2,7 +2,7 @@
 cask "mkghtag" do
   desc "Create GitHub Tags via API"
   homepage "https://github.com/suzuki-shunsuke/mkghtag"
-  version "0.1.9"
+  version "0.1.10"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,29 @@ cask "mkghtag" do
 
   on_macos do
     on_intel do
-      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.9/mkghtag_darwin_amd64.tar.gz"
-      sha256 "1857ef92f29a8feffdbd5f67ff4377c2d418b9380ff54e1da17a7575e221aa54"
+      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.10/mkghtag_darwin_amd64.tar.gz"
+      sha256 "9eae1b00463b9938c5b36df89bb67277a03273beb94495809afb321f3571c056"
     end
     on_arm do
-      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.9/mkghtag_darwin_arm64.tar.gz"
-      sha256 "4c8f6a638e05bd18fad4523254751d809b26d6df3a616932f7351d7b040bfec1"
+      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.10/mkghtag_darwin_arm64.tar.gz"
+      sha256 "bbb04771190571ff1eadaa4de11fb52256f9e2e2a5db222ad8942180dcbfaa8e"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.9/mkghtag_linux_amd64.tar.gz"
-      sha256 "ffd6da4877ae20929e29c89c9be4f4fe2b648588c1cba1311afac6608a65a9d2"
+      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.10/mkghtag_linux_amd64.tar.gz"
+      sha256 "d288680029d3729d8617964ae2b528e544a10db8abfc7d55294442f7ba4031c5"
     end
     on_arm do
-      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.9/mkghtag_linux_arm64.tar.gz"
-      sha256 "1447b0a348c8836ece9b9dfef3a9f14f2495427507a8cb4d11614bd6dcb09894"
+      url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v0.1.10/mkghtag_linux_arm64.tar.gz"
+      sha256 "d9e5c2898d3674bc6f9bb9d951891a7c04827d53349cd58a7f66bd5d05896437"
+    end
+  end
+
+  postflight do
+    if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/mkghtag"]
     end
   end
 
