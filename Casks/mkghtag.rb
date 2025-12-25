@@ -3,7 +3,7 @@ cask "mkghtag" do
   name "mkghtag"
   desc "Create GitHub Tags via API"
   homepage "https://github.com/suzuki-shunsuke/mkghtag"
-  version "0.1.12"
+  version "0.1.13"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "mkghtag" do
   on_macos do
     on_intel do
       url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v#{version}/mkghtag_darwin_amd64.tar.gz"
-      sha256 "b21bf4896cfb37d09fd865d843b153f46d8fec2be6e790368cd82be59b8bfecf"
+      sha256 "cf36ad0bbce0b52405b4539111860034f1ceb59d805567d67ba9feb42781bcb3"
     end
     on_arm do
       url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v#{version}/mkghtag_darwin_arm64.tar.gz"
-      sha256 "9637bc4672e4be29bbed9fca566f2749fb73d4016f6d34647f8b4ca4ef50dce8"
+      sha256 "19e07430749ef83b02bf5d7432395d84bdc7ee833d02208fe8e585c0d7d4356b"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v#{version}/mkghtag_linux_amd64.tar.gz"
-      sha256 "0f6600c8822b4b784bcf58b46212df7e1a97e4622e3f8db376b98affb7e84540"
+      sha256 "d7e883b0d6201280fe734985c654fe6496e06bf8508a64f2661301c7c0db0472"
     end
     on_arm do
       url "https://github.com/suzuki-shunsuke/mkghtag/releases/download/v#{version}/mkghtag_linux_arm64.tar.gz"
-      sha256 "3d9059127db3603092a141e6b99f41e27b10a73ddfdfa10b5ccf27b3e2d50747"
+      sha256 "0a6e92f66d617815ff918d2e756123c9af9f14733d77e774f96528627db17a11"
     end
   end
 
